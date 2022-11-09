@@ -19,7 +19,7 @@ export class CustomvalidationService {
     return (control: AbstractControl): { [key: string]: any } => {
       if (!control.value) return null;
 
-      const regex = new RegExp('^(+27|0)[\\w+]{9}');
+      const regex = new RegExp('^(\\+27|0)[0-9]{9}');
       const valid = regex.test(control.value);
       return valid ? null : { invalidCell: true };
     };

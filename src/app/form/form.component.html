@@ -47,8 +47,8 @@
                           Cell is required
                       </span>
                       <span class="text-danger"
-                              *ngIf="registerFormControl.password.touched && registerFormControl.password.errors?.invalidCell">
-                              Cell should have minimum 10 digits
+                              *ngIf="registerFormControl.cell.touched && registerFormControl.cell.errors?.invalidCell">
+                              Cell should valid, e.g. 0841254254 or +27123456794
                           </span>
                   </div>
                       <div class="form-group">

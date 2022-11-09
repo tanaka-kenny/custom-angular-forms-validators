@@ -28,8 +28,10 @@ export class FormComponent implements OnInit {
         ],
         cell: [
           '',
-          [Validators.required],
-          this.customValidator.phoneNumberValidator(),
+          [
+            Validators.required,
+            this.customValidator.phoneNumberValidator(),
+          ],
         ],
         password: [
           '',
