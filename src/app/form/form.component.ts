@@ -26,6 +26,11 @@ export class FormComponent implements OnInit {
           [Validators.required],
           this.customValidator.userNameValidator.bind(this.customValidator),
         ],
+        cell: [
+          '',
+          [Validators.required],
+          this.customValidator.phoneNumberValidator(),
+        ],
         password: [
           '',
           Validators.compose([
